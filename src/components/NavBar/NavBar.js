@@ -4,8 +4,9 @@ import Link from "next/link";
 import cart from "../../../public/images/icon-cart.svg";
 import logo from "../../../public/images/logo.svg";
 import Image from "next/image";
+import classNames from "classnames";
 
-export default function NavBar() {
+export default function NavBar({}) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navlist}>
@@ -20,9 +21,14 @@ export default function NavBar() {
             />
           </Link>
         </div>
-        <div>
-          <Image src={cart} alt="cart" width={15} height={15} />
-        </div>
+
+        <button className={classNames(`snipcart-checkout`, styles.navCart)}>
+          <Image src={cart} alt="cart" width={20} height={20} />
+
+          <span className={classNames(`snipcart-items-count`, styles.count)}>
+            0
+          </span>
+        </button>
       </div>
     </nav>
   );
