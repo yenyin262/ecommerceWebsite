@@ -4,12 +4,8 @@ import { printful } from "../src/lib/printful-client";
 import { getProductFromResult } from "../src/lib/getProductFromResult";
 import Layout from "../src/components/Layout/Layout";
 
-export default function ProductPage({ product }) {
-  return (
-    <Layout>
-      <ProductDetails product={product} />
-    </Layout>
-  );
+export default function ProductPage({ product, otherProducts }) {
+  return <ProductDetails product={product} otherProducts={otherProducts} />;
 }
 
 export async function getStaticProps({ params }) {
@@ -18,9 +14,26 @@ export async function getStaticProps({ params }) {
 
   const product = getProductFromResult(response);
 
+  const { result: productIds } = await printful.get("sync/products");
+
+  const allOtherProducts = await Promise.all(
+    productIds.map(async ({ id }) => {
+      return await printful.get(`sync/products/${id}`);
+    })
+  );
+
+  const otherProducts = allOtherProducts
+    .map(getProductFromResult)
+    .filter(({ id }) => id != productId);
+  console.log(
+    "🚀 ~ file: [productId].js ~ line 28 ~ getStaticProps ~ otherProducts",
+    otherProducts
+  );
+
   return {
     props: {
       product,
+      otherProducts,
     },
   };
 }
