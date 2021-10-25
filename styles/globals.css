@@ -1,3 +1,7 @@
+:root {
+  --color-link: green;
+}
+
 html,
 body {
   padding: 0;
@@ -14,4 +18,21 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.snipcart-button-primary {
+  background-color: var(--color-link);
+}
+
+.snipcart-item-line__media--small {
+  height: 100px;
+}
+
+.snipcart-item-description {
+  font-weight: 600;
+}
+
+.snipcart-item-custom-fields,
+.snipcart-item-quantity__label {
+  font-weight: 700;
 }
