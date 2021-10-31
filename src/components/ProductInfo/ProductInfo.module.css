@@ -1,0 +1,55 @@
+.gridInfoItem {
+  padding: 0 20px 20px;
+}
+.productName {
+  margin: 12px 0 12px;
+  letter-spacing: 0.8px;
+  width: 345px;
+}
+
+.productPrice {
+  line-height: 1.1;
+  font-size: 20px;
+  letter-spacing: 2.8px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.sizeLabel {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.selectField {
+  padding: 7px 10px 7px 8px;
+  border: solid 1px #999;
+  line-height: 1.5;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 10px 0px 20px;
+}
+
+.cartBtn {
+  background-color: #018849;
+  border: none;
+  padding: 10px 50px;
+}
+
+.btnText {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .gridInfoItem {
+    grid-area: info;
+  }
+  .productPrice {
+    margin-bottom: 30px;
+  }
+}
