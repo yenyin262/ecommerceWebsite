@@ -11,7 +11,7 @@ export default function Home({ products }) {
   console.log(products, "pro");
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
 
       <main className={styles.mainSection}>
         <h1 className={styles.title}>Psalms Series x YY</h1>
