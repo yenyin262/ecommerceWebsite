@@ -5,7 +5,11 @@ import { getProductFromResult } from "../src/lib/getProductFromResult";
 import Layout from "../src/components/Layout/Layout";
 
 export default function ProductPage({ product, otherProducts }) {
-  return <ProductDetails product={product} otherProducts={otherProducts} />;
+  return (
+    <Layout>
+      <ProductDetails product={product} otherProducts={otherProducts} />
+    </Layout>
+  );
 }
 
 export async function getStaticProps({ params }) {
