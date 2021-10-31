@@ -1,0 +1,43 @@
+@media (min-width: 1024px) {
+  .gridInfoItem {
+    max-width: 200px;
+    text-align: center;
+  }
+  .productName {
+    margin: 10px 0;
+  }
+  .productSizeInfoContainer {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .cartBtn {
+    background-color: #018849;
+    border: none;
+    padding: 10px 50px;
+    color: white;
+  }
+  .btnText {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .productPrice {
+    margin-bottom: 10px;
+    color: #666;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+  }
+
+  .selectField {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .sizeLabel {
+    margin-bottom: 10px;
+  }
+}
