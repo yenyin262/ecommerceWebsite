@@ -1,5 +1,6 @@
 .product-name {
   margin: 12px 0 12px;
+  max-width: fit-content;
 }
 
 .product-price {
@@ -22,8 +23,8 @@
 } */
 
 .gridItemContainer {
-  justify-self: center;
-  width: 250px;
+  position: relative;
+  display: block;
 }
 @media (min-width: 768px) {
   .productContainer {
