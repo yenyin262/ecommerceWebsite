@@ -1,0 +1,33 @@
+.likeList-container {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.title {
+  margin-left: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  .likeList-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .likeList-container {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
