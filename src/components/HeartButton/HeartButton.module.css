@@ -1,0 +1,17 @@
+.btn {
+  fill: black;
+}
+
+.filled {
+  fill: red;
+}
+
+.heartIcon {
+  position: absolute;
+  border: none;
+  background: none;
+  position: absolute;
+  top: 10px;
+  width: 42px;
+  right: 10px;
+}
