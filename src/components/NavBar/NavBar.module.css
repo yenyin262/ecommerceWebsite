@@ -7,7 +7,6 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  /* margin: 0 10px; */
   padding: 10px;
   color: white;
   align-items: center;
@@ -17,6 +16,9 @@
   width: 150px;
 }
 
+.logoContainer {
+  margin-top: 6px;
+}
 .navCart {
   background: none;
   border: none;
@@ -29,4 +31,47 @@
 
 .snipcart-button-primary {
   background-color: var(--color-link);
+}
+
+.wishlistbtn {
+  fill: #fff;
+  width: 24px;
+}
+
+.wishlistbtn:hover {
+  background-color: #f5f5f5;
+  padding: 0.2rem;
+  fill: black;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+}
+.heartLink {
+  position: relative;
+}
+.countBtn {
+  background-color: #0058a3;
+  color: #fff;
+  border-radius: 50px;
+  line-height: 0.95rem;
+  margin-top: 0;
+  margin-bottom: 0px;
+  position: absolute;
+  min-width: 19px;
+  height: 19px;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 400;
+  padding: 2px;
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .icons {
+    max-width: 150px;
+  }
 }

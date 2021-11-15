@@ -21,6 +21,10 @@
   }
 } */
 
+.imgItem {
+  position: relative;
+}
+
 .product-name {
   margin: 10px 0 0;
   height: 45px;
@@ -59,7 +63,7 @@
 }
 @media (min-width: 1024px) {
   .gridItemContainer {
-    width: 250px;
+    width: 200px;
   }
 
   .itemContainer {
