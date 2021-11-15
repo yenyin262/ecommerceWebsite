@@ -4,7 +4,9 @@ import { WishlistProvider } from "../src/context/wishlist";
 function MyApp({ Component, pageProps }) {
   return (
     <WishlistProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </WishlistProvider>
   );
 }
