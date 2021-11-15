@@ -5,11 +5,7 @@ import { getProductFromResult } from "../src/lib/getProductFromResult";
 import Layout from "../src/components/Layout/Layout";
 
 export default function ProductPage({ product, otherProducts }) {
-  return (
-    <Layout>
-      <ProductDetails product={product} otherProducts={otherProducts} />
-    </Layout>
-  );
+  return <ProductDetails product={product} otherProducts={otherProducts} />;
 }
 
 export async function getStaticProps({ params }) {
@@ -29,10 +25,6 @@ export async function getStaticProps({ params }) {
   const otherProducts = allOtherProducts
     .map(getProductFromResult)
     .filter(({ id }) => id != productId);
-  console.log(
-    "🚀 ~ file: [productId].js ~ line 28 ~ getStaticProps ~ otherProducts",
-    otherProducts
-  );
 
   return {
     props: {
