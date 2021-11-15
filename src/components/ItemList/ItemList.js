@@ -1,15 +1,10 @@
-import next from "next";
-import { imageConfigDefault } from "next/dist/server/image-config";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getProductName } from "../../lib/getProductName";
 import styles from "./ItemList.module.css";
-import HeartButton from "../HeartButton/HeartButton";
-import RedHeartButton from "../RedHeartButton/RedHeartButton";
-
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import useWishlistState from "../../hooks/useWishlistState";
+import HeartButton from "../HeartButton/HeartButton";
 
 // create active state
 // print price that is in active state and active state is an index
