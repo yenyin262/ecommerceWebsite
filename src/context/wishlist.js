@@ -83,11 +83,12 @@ export const WishlistProvider = ({ children }) => {
   const isSaved = (id) => !!state.items.find((item) => item.id === id);
 
   const hasItems = state.items.length > 0;
-  // const [state, dispatch] = useReducer(reducer, JSON.parse(savedWishlist));
+  const itemsCount = state.items.length;
+
   return (
     <WishlistDispatchContext.Provider value={dispatchValue}>
       <WishlistStateContext.Provider
-        value={{ items: state.items, isSaved, hasItems }}
+        value={{ items: state.items, isSaved, hasItems, itemsCount }}
       >
         {children}
       </WishlistStateContext.Provider>
