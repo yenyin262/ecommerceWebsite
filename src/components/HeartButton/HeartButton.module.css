@@ -1,5 +1,7 @@
 .btn {
   fill: black;
+  width: 30px;
+  height: 30px;
 }
 
 .filled {
@@ -11,7 +13,11 @@
   border: none;
   background: none;
   position: absolute;
-  top: 10px;
-  width: 42px;
-  right: 10px;
+  top: 0;
+  padding: 10px;
+  right: 0;
+}
+
+.heartIcon:hover {
+  cursor: pointer;
 }
