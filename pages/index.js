@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import ItemList from "../src/components/ItemList/ItemList";
 import NavBar from "../src/components/NavBar/NavBar";
+import SocialMediaIcons from "../src/components/SocialMediaIcons/SocialMediaIcons";
 import { getProductFromResult } from "../src/lib/getProductFromResult";
 
 import { printful } from "../src/lib/printful-client";
@@ -11,8 +12,6 @@ export default function Home({ products }) {
   console.log(products, "pro");
   return (
     <div>
-      <NavBar />
-
       <main className={styles.mainSection}>
         <h1 className={styles.title}>Psalms Series x YY</h1>
         <div className={styles[`grid-container`]}>
@@ -23,16 +22,15 @@ export default function Home({ products }) {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <div style={{ maxWidth: "500px" }}>
+          <strong> Psalm Series</strong> Bring your ideas to life with rewards,
+          inspiration, discounts and a few surprises along the way. Learn more.
+          <br />
+          <span> Join now </span>
+        </div>
+        <div>
+          <SocialMediaIcons />
+        </div>
       </footer>
     </div>
   );
