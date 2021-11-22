@@ -1,10 +1,9 @@
-import React from "react";
 import ProductDetails from "../src/components/ProductDetails/ProductDetails";
 import { printful } from "../src/lib/printful-client";
 import { getProductFromResult } from "../src/lib/getProductFromResult";
-import Layout from "../src/components/Layout/Layout";
-
+import PropTypes from "prop-types";
 export default function ProductPage({ product, otherProducts }) {
+  console.log(otherProducts, "this is product");
   return <ProductDetails product={product} otherProducts={otherProducts} />;
 }
 
@@ -48,3 +47,8 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+
+ProductPage.propTypes = {
+  product: PropTypes.object,
+  otherProducts: PropTypes.array,
+};

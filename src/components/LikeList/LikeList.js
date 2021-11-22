@@ -6,6 +6,7 @@ import ExpressCart from "../ExpressCart/ExpressCart";
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import useWishlistState from "../../hooks/useWishlistState";
 import HeartButton from "../HeartButton/HeartButton";
+import PropTypes from "prop-types";
 
 export default function LikeList({ product }) {
   const [selectedProductIdx, setSelectedProductIdx] = useState(0);
@@ -51,3 +52,7 @@ export default function LikeList({ product }) {
     </div>
   );
 }
+
+LikeList.propTypes = {
+  product: PropTypes.object,
+};

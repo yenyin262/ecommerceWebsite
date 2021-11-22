@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ProductInfo.module.css";
 import { getProductName } from "../../lib/getProductName";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 export default function ProductInfo({
   product,
@@ -12,6 +13,7 @@ export default function ProductInfo({
   const handleProductSelect = (e) => {
     setSelectedProductIdx(e.target.value);
   };
+
   return (
     <div className={styles.gridInfoItem}>
       <div className={styles.productName}>{product.name}</div>
@@ -52,3 +54,10 @@ export default function ProductInfo({
     </div>
   );
 }
+
+ProductInfo.propTypes = {
+  product: PropTypes.object,
+  selectedProductFile: PropTypes.object,
+  selectedProductIdx: PropTypes.number,
+  setSelectedProductIdx: PropTypes.func,
+};

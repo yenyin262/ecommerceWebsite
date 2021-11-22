@@ -6,6 +6,7 @@ import Carousel from "../Carousel/Carousel";
 import useWishlistState from "../../hooks/useWishlistState";
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import HeartButton from "../HeartButton/HeartButton";
+import PropTypes from "prop-types";
 
 export default function ProductDetails({ product, otherProducts }) {
   const [selectedProductIdx, setSelectedProductIdx] = useState(0);
@@ -46,3 +47,8 @@ export default function ProductDetails({ product, otherProducts }) {
     </div>
   );
 }
+
+ProductDetails.propTypes = {
+  product: PropTypes.object,
+  otherProducts: PropTypes.array,
+};

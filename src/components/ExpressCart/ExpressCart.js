@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ExpressCart.module.css";
 import { getProductName } from "../../lib/getProductName";
 import classNames from "classnames";
-
+import PropTypes from "prop-types";
 export default function ExpressCart({
   selectedProductIdx,
   setSelectedProductIdx,
@@ -15,6 +15,8 @@ export default function ExpressCart({
   const selectedProductFile = product.variants[selectedProductIdx].files.find(
     ({ type }) => type === "preview"
   );
+
+  console.log(typeof product, "now prodctidx");
   return (
     <div className={styles.gridInfoItem}>
       <div className={styles.productName}>{product.name}</div>
@@ -54,3 +56,9 @@ export default function ExpressCart({
     </div>
   );
 }
+
+ExpressCart.propTypes = {
+  selectedProductIdx: PropTypes.number,
+  setSelectedProductIdx: PropTypes.func,
+  product: PropTypes.object,
+};

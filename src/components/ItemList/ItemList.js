@@ -5,6 +5,7 @@ import styles from "./ItemList.module.css";
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import useWishlistState from "../../hooks/useWishlistState";
 import HeartButton from "../HeartButton/HeartButton";
+import PropTypes from "prop-types";
 
 // create active state
 // print price that is in active state and active state is an index
@@ -48,3 +49,7 @@ export default function ItemList({ product }) {
     </>
   );
 }
+
+ItemList.propTypes = {
+  product: PropTypes.object,
+};

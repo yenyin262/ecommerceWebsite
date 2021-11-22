@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import styles from "./HeartButton.module.css";
+import PropTypes from "prop-types";
 
 export default function HeartButton({ onClick, filled }) {
   const handleClick = (e) => {
@@ -32,3 +33,8 @@ export default function HeartButton({ onClick, filled }) {
     </button>
   );
 }
+
+HeartButton.propTypes = {
+  onClick: PropTypes.func,
+  filled: PropTypes.bool,
+};
