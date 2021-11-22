@@ -1,15 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import ItemList from "../src/components/ItemList/ItemList";
-import NavBar from "../src/components/NavBar/NavBar";
 import SocialMediaIcons from "../src/components/SocialMediaIcons/SocialMediaIcons";
 import { getProductFromResult } from "../src/lib/getProductFromResult";
-
 import { printful } from "../src/lib/printful-client";
 import styles from "../styles/index.module.css";
+import PropTypes from "prop-types";
 
 export default function Home({ products }) {
-  console.log(products, "pro");
   return (
     <div>
       <main className={styles.mainSection}>
@@ -20,18 +16,6 @@ export default function Home({ products }) {
           })}
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <div style={{ maxWidth: "500px" }}>
-          <strong> Psalm Series</strong> Bring your ideas to life with rewards,
-          inspiration, discounts and a few surprises along the way. Learn more.
-          <br />
-          <span> Join now </span>
-        </div>
-        <div>
-          <SocialMediaIcons />
-        </div>
-      </footer>
     </div>
   );
 }
@@ -53,3 +37,7 @@ export async function getStaticProps() {
     },
   };
 }
+
+Home.propTypes = {
+  products: PropTypes.array,
+};
