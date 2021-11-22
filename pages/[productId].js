@@ -3,7 +3,6 @@ import { printful } from "../src/lib/printful-client";
 import { getProductFromResult } from "../src/lib/getProductFromResult";
 import PropTypes from "prop-types";
 export default function ProductPage({ product, otherProducts }) {
-  console.log(otherProducts, "this is product");
   return <ProductDetails product={product} otherProducts={otherProducts} />;
 }
 

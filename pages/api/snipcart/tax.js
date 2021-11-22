@@ -2,7 +2,6 @@ import { printful } from "../../../src/lib/printful-client";
 
 export default async (req, res) => {
   const { eventName, content } = req.body;
-  console.log("🚀 ~ file: tax.js ~ line 5 ~ eventName", eventName);
 
   if (eventName !== "taxes.calculate") return res.status(200).end();
 

@@ -16,7 +16,6 @@ export default function ExpressCart({
     ({ type }) => type === "preview"
   );
 
-  console.log(typeof product, "now prodctidx");
   return (
     <div className={styles.gridInfoItem}>
       <div className={styles.productName}>{product.name}</div>
