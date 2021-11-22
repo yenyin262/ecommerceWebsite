@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "eslint": "8.0.1",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "prop-types": "^15.7.2"
   }
 }
