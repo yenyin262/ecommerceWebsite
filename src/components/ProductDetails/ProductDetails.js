@@ -7,8 +7,10 @@ import useWishlistState from "../../hooks/useWishlistState";
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import HeartButton from "../HeartButton/HeartButton";
 import PropTypes from "prop-types";
+import useIsClient from "../../hooks/useIsClient";
 
 export default function ProductDetails({ product, otherProducts }) {
+  const isClient = useIsClient();
   const [selectedProductIdx, setSelectedProductIdx] = useState(0);
   const selectedProductFile = product.variants[selectedProductIdx].files.find(
     ({ type }) => type === "preview"
@@ -21,6 +23,7 @@ export default function ProductDetails({ product, otherProducts }) {
   const toggleWishlist = () => {
     inWishlist ? removeItem(product.id) : addItem(product);
   };
+
   return (
     <div>
       <div className={styles.gridContainer}>
@@ -32,7 +35,9 @@ export default function ProductDetails({ product, otherProducts }) {
             src={selectedProductFile.preview_url}
             className={styles.productImg}
           />
-          <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+          {isClient && (
+            <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+          )}
         </div>
 
         <ProductInfo

@@ -1,4 +1,3 @@
-import next from "next";
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./LikeList.module.css";
@@ -7,8 +6,10 @@ import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import useWishlistState from "../../hooks/useWishlistState";
 import HeartButton from "../HeartButton/HeartButton";
 import PropTypes from "prop-types";
+import useIsClient from "../../hooks/useIsClient";
 
 export default function LikeList({ product }) {
+  const isClient = useIsClient();
   const [selectedProductIdx, setSelectedProductIdx] = useState(0);
   const selectedProductFile = product.variants[selectedProductIdx].files.find(
     ({ type }) => type === "preview"
@@ -32,7 +33,9 @@ export default function LikeList({ product }) {
             src={selectedProductFile.preview_url}
             className={styles.productImg}
           />{" "}
-          <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+          {isClient && (
+            <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+          )}
         </div>
 
         <div className={styles.productdetailsContainer}>

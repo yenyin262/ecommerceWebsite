@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./ItemList.module.css";
@@ -6,12 +6,14 @@ import useWishlistDispatch from "../../hooks/useWishlistDispatch";
 import useWishlistState from "../../hooks/useWishlistState";
 import HeartButton from "../HeartButton/HeartButton";
 import PropTypes from "prop-types";
+import useIsClient from "../../hooks/useIsClient";
 
 // create active state
 // print price that is in active state and active state is an index
 // active state on Image
 
 export default function ItemList({ product }) {
+  const isClient = useIsClient();
   const selectedProductFile = product.variants[0].files.find(
     ({ type }) => type === "preview"
   );
@@ -23,6 +25,12 @@ export default function ItemList({ product }) {
   const toggleWishlist = () => {
     inWishlist ? removeItem(product.id) : addItem(product);
   };
+
+  // const [isClient, setIsClient] = useState(false);
+
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
   return (
     <>
@@ -42,7 +50,9 @@ export default function ItemList({ product }) {
                 {product.variants[0].retail_price}
               </div>
             </div>
-            <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+            {isClient && (
+              <HeartButton onClick={toggleWishlist} filled={inWishlist} />
+            )}
           </a>
         </Link>
       </div>
