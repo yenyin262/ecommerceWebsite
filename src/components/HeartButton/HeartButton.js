@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export default function HeartButton({ onClick, filled }) {
   const handleClick = (e) => {
     e.preventDefault(); //  <------ Here is the magic
-    console.log("like attempted");
+
     onClick();
   };
   return (
