@@ -1,7 +1,7 @@
 .icons {
   display: flex;
   justify-content: space-between;
-  width: 15%;
+  width: 100px;
 }
 
 @media (min-width: 1024px) {
