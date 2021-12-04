@@ -1,0 +1,40 @@
+.container {
+  width: 350px;
+  padding: 20px;
+  font-size: 16px;
+  height: 200px;
+  background-color: #dbd2c6;
+  line-height: 24px;
+  position: absolute;
+  left: 50%;
+  top: 300px;
+  transform: translate(-50%, -50%);
+  transition: height 0.5s, width 0.5s;
+  z-index: 1;
+  font-weight: 500;
+}
+.btnContainer {
+  justify-content: flex-end;
+  display: flex;
+}
+.btn {
+  border: none;
+  background: none;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 600px;
+    height: 150px;
+  }
+}
