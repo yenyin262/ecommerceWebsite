@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #7b0100;
+}
+
+.navlist {
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+}
