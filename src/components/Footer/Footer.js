@@ -1,6 +1,6 @@
 import React from "react";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
