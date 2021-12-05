@@ -9,7 +9,7 @@ export default function Footer() {
         <strong> Psalm Series</strong> Bringing inspiration words to you, and
         laughter along the way. Learn more.
         <br />
-        <span> Shop now </span>
+        <span> Shop with us</span>
       </div>
       <SocialMediaIcons />
     </footer>
