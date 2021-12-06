@@ -2,3 +2,12 @@
   background-color: #f5f5f5;
   padding: 64px 64px 64px 24px;
 }
+
+.container {
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.motto {
+  margin-bottom: 10px;
+}
