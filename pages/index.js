@@ -8,7 +8,7 @@ export default function Home({ products }) {
   return (
     <div className={styles.homeContainer}>
       <main className={styles.mainSection}>
-        <h1 className={styles.title}>Psalms Series x YY</h1>
+        <h1 className={styles.title}>Psalm Series x YY</h1>
         <div className={styles[`grid-container`]}>
           {products.map((product) => {
             return <ItemList key={product.id} product={product} />;
