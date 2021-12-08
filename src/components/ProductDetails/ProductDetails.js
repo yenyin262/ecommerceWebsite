@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./ProductDetails.module.css";
-import ProductInfo from "../ProductInfo/ProductInfo";
+import ProductAsideContent from "../ProductAsideContent/ProductAsideContent";
 import Carousel from "../Carousel/Carousel";
 import useWishlistState from "../../hooks/useWishlistState";
 import useWishlistDispatch from "../../hooks/useWishlistDispatch";
@@ -40,7 +40,7 @@ export default function ProductDetails({ product, otherProducts }) {
           )}
         </div>
 
-        <ProductInfo
+        <ProductAsideContent
           product={product}
           selectedProductIdx={selectedProductIdx}
           selectedProductFile={selectedProductFile}

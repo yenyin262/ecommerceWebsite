@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./ProductInfo.module.css";
+import styles from "./ProductAsideContent.module.css";
 import { getProductName } from "../../lib/getProductName";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-export default function ProductInfo({
+export default function ProductAsideContent({
   product,
   selectedProductFile,
   selectedProductIdx,
@@ -55,7 +55,7 @@ export default function ProductInfo({
   );
 }
 
-ProductInfo.propTypes = {
+ProductAsideContent.propTypes = {
   product: PropTypes.object,
   selectedProductFile: PropTypes.object,
   selectedProductIdx: PropTypes.number,
