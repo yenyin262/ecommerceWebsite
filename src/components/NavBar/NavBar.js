@@ -16,14 +16,15 @@ export default function NavBar({}) {
       <div className={styles.navlist}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            <a>
-              <Image
+            <a className={styles.text}>
+              {/* <Image
                 src={logo}
                 alt="logo"
                 width={80}
                 height={20}
                 className={styles.logo}
-              />
+              /> */}
+              Psalm Series
             </a>
           </Link>
         </div>

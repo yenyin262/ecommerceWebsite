@@ -3,6 +3,12 @@
   height: 50px;
 }
 
+.text {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  font-weight: 700;
+}
 .navlist {
   list-style: none;
   display: flex;
