@@ -20,7 +20,6 @@ export default function ProductAsideContent({
       <div className={styles.productPrice}>
         {product.variants[selectedProductIdx].retail_price}
       </div>
-
       <div className={styles.productSizeInfoContainer}>
         <label className={styles.sizeLabel}>Style/Size</label>
         <select
