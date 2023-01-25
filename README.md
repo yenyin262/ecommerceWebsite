@@ -1,4 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Psalm Series E-commerce Website
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+
+## Overview
+
+Development of a Headless E-commerce Website using NextJs, Printful API, and SnipCart API
+
+Personal Developments:
+
+1. Implementing NextJS-
+
+   NextJS features:-
+   Server-side Rendering generates the initial HTML of the page on the server before sending it to the browser which allows the browser to display the layout while JavaScript is loading.
+
+   Static Site Generation (SSG) that allows you to pre-render pages at build time and serve them as static HTML files.
+
+2. API integration:-
+   Printful API
+
+   Printful API allows users to access and manage their store's orders, products, and fulfillment services.
+
+   SnipCart API
+
+   Using SnipCart as a shopping cart solution
+
+### Built With
+
+- React
+- CSS Modules
+
+## Features
+
+- The website is designed to provide a seamless customer experience by integrating multiple API's to improve the inventory management, checkout process and automate some of the e-commerce tasks.
+
+- Printful API Integration: The website is integrated with Printful API, which allows for automated product creation, inventory management, and order fulfillment. This can help to streamline the e-commerce process and reduce the workload for the website owners.
+
+- SnipCart API Integration: The website is integrated with SnipCart API, which enables the website to manage the shopping cart and checkout process. This integration allows for a seamless customer experience and optimizes the product inventory and checkout process.
 
 ## Getting Started
 
@@ -12,23 +53,8 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## License
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+MIT
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
