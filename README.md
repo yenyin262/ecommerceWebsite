@@ -28,7 +28,7 @@ Personal Developments:
 
    Using SnipCart as a shopping cart solution
 
-### Built With
+## Built With
 
 - React
 - CSS Modules
